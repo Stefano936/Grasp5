@@ -1,8 +1,7 @@
-
 namespace Full_GRASP_And_SOLID
 {
-    public interface IPrinter
+    public interface IPrinterText
     {
-         void PrintRecipe(Recipe recipe);
+        string GetTextToPrint();
     }
 }
