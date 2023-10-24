@@ -2,8 +2,11 @@ using System.IO;
 
 namespace Full_GRASP_And_SOLID
 {
-    public interface IPrinter
+    public class FilePrinter : IPrinter
     {
-        void PrintRecipe(IPrinterText printerText);
+        public void PrintRecipe(IPrinterText printerText)
+        {
+            File.WriteAllText("Recipe.txt", printerText.GetTextToPrint());
+        }
     }
 }
